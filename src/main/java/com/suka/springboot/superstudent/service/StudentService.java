@@ -2,6 +2,7 @@ package com.suka.springboot.superstudent.service;
 
 import com.suka.springboot.superstudent.dao.StudentRepository;
 import com.suka.springboot.superstudent.entity.Student;
+import com.suka.springboot.superstudent.exceptionhandler.StudentNotFoundException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -13,22 +14,35 @@ public class StudentService {
     @Autowired
     StudentRepository studentRepository;
 
+    // Find all student
     public List<Student> findAllUser() {
         return studentRepository.findAll();
     }
 
+    // Find student by ID
     public Student findById(int id) {
-        return studentRepository.findById(id).orElse(null);
+        return studentRepository.findById(id)
+                .orElseThrow(() -> new StudentNotFoundException("Student id not found: " + id));
     }
 
+    // Save new student to database
     public void save(Student student) {
         studentRepository.save(student);
     }
 
-    public void update(int id, Student student) {
-        Student studentFound = studentRepository.findById(id).orElseThrow() =>
+    // Update student by id
+    public void update(int id, Student newStudent) {
+        Student existingStudent = studentRepository.findById(id)
+                .orElseThrow(() -> new StudentNotFoundException("Student id not found: " + id));
+
+        existingStudent.setFirstName(newStudent.getFirstName());
+        existingStudent.setLastName(newStudent.getLastName());
+        existingStudent.setEmail(newStudent.getEmail());
+
+        studentRepository.save(newStudent);
     }
 
+    // Delete student by ID
     public void delete(int id) {
         studentRepository.deleteById(id);
     }
