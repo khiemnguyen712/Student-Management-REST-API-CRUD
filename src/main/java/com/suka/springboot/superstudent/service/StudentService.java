@@ -19,18 +19,18 @@ public class StudentService {
         return studentRepository.findAll();
     }
 
-    // Find student by ID
+    // Find a student by ID and throws an exception when no student is found
     public Student findById(int id) {
         return studentRepository.findById(id)
-                .orElseThrow(() -> new StudentNotFoundException("Student id not found: " + id));
+                .orElseThrow(() -> new StudentNotFoundException(id));
     }
 
-    // Save new student to database
+    // Add new student to database
     public void save(Student student) {
         studentRepository.save(student);
     }
 
-    // Update student by id
+    // Update an existing student
     public void update(int id, Student newStudent) {
         Student existingStudent = findById(id);
 
@@ -41,7 +41,7 @@ public class StudentService {
         studentRepository.save(newStudent);
     }
 
-    // Delete student by ID
+    // Delete a student by ID
     public void delete(int id) {
         findById(id);
 

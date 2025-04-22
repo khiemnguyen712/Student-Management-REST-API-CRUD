@@ -2,16 +2,8 @@ package com.suka.springboot.superstudent.exception;
 
 public class StudentNotFoundException extends RuntimeException {
 
-    public StudentNotFoundException(String message) {
-        super(message);
+    // Return an error message
+    public StudentNotFoundException(int studentId) {
+        super("Student ID not found: " + studentId);
     }
-
-    public StudentNotFoundException(String message, Throwable cause) {
-        super(message, cause);
-    }
-
-    public StudentNotFoundException(Throwable cause) {
-        super(cause);
-    }
-
 }

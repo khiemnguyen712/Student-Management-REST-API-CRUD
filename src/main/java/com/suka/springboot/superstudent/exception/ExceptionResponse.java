@@ -1,5 +1,6 @@
 package com.suka.springboot.superstudent.exception;
 
+// Custom ExceptionResponse JSON entity, basically like the Student entity
 public class ExceptionResponse {
 
     private int status;
