@@ -32,8 +32,7 @@ public class StudentService {
 
     // Update student by id
     public void update(int id, Student newStudent) {
-        Student existingStudent = studentRepository.findById(id)
-                .orElseThrow(() -> new StudentNotFoundException("Student id not found: " + id));
+        Student existingStudent = findById(id);
 
         existingStudent.setFirstName(newStudent.getFirstName());
         existingStudent.setLastName(newStudent.getLastName());
@@ -44,8 +43,7 @@ public class StudentService {
 
     // Delete student by ID
     public void delete(int id) {
-        Student existingStudent = studentRepository.findById(id)
-                .orElseThrow(() -> new StudentNotFoundException("Student id not found: " + id));
+        studentRepository.findById(id);
 
         studentRepository.deleteById(id);
     }

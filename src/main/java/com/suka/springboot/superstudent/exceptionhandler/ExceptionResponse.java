@@ -3,14 +3,14 @@ package com.suka.springboot.superstudent.exceptionhandler;
 public class ExceptionResponse {
 
     private int status;
-    private long timestamp;
+    private long timeStamp;
     private String message;
 
     public ExceptionResponse() {}
 
     public ExceptionResponse(int status, long timestamp, String message) {
         this.status = status;
-        this.timestamp = timestamp;
+        this.timeStamp = timestamp;
         this.message = message;
     }
 
@@ -22,12 +22,12 @@ public class ExceptionResponse {
         this.status = status;
     }
 
-    public long getTimestamp() {
-        return timestamp;
+    public long getTimeStamp() {
+        return timeStamp;
     }
 
-    public void setTimestamp(long timestamp) {
-        this.timestamp = timestamp;
+    public void setTimeStamp(long timeStamp) {
+        this.timeStamp = timeStamp;
     }
 
     public String getMessage() {
