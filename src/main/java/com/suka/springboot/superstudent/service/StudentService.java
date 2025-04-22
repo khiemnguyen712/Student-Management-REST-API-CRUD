@@ -1,7 +1,7 @@
 package com.suka.springboot.superstudent.service;
 
 import com.suka.springboot.superstudent.dao.StudentRepository;
-import com.suka.springboot.superstudent.model.Student;
+import com.suka.springboot.superstudent.entity.Student;
 import com.suka.springboot.superstudent.exception.StudentNotFoundException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;

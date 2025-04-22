@@ -1,6 +1,6 @@
 package com.suka.springboot.superstudent.controller;
 
-import com.suka.springboot.superstudent.model.Student;
+import com.suka.springboot.superstudent.entity.Student;
 import com.suka.springboot.superstudent.service.StudentService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
