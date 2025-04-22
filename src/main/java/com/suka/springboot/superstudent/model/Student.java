@@ -1,4 +1,4 @@
-package com.suka.springboot.superstudent.entity;
+package com.suka.springboot.superstudent.model;
 
 import jakarta.persistence.*;
 

@@ -1,4 +1,4 @@
-package com.suka.springboot.superstudent.exceptionhandler;
+package com.suka.springboot.superstudent.exception;
 
 public class ExceptionResponse {
 

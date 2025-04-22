@@ -1,4 +1,4 @@
-package com.suka.springboot.superstudent.exceptionhandler;
+package com.suka.springboot.superstudent.exception;
 
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
