@@ -43,8 +43,10 @@ public class StudentService {
 
     // Delete student by ID
     public void delete(int id) {
-        studentRepository.findById(id);
+        findById(id);
 
         studentRepository.deleteById(id);
+
+        System.out.println("Successfully deleted student with ID: " + id);
     }
 }
