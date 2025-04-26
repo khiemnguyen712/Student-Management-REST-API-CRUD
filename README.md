@@ -89,7 +89,7 @@ INSERT INTO student (first_name, last_name, email) VALUES
 ```json
 {
   "timeStamp": 172633,
-  "error": STUDENT_NOT_FOUND,
+  "error": 404,
   "message": "Student with ID 7 not found"
 }
 ```
