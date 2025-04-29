@@ -9,8 +9,6 @@ Built using **Spring Boot**, providing Create, Read, Update, Delete (CRUD) funct
 - Spring Web (REST Controllers)
 - Spring Data JPA
 - MySQL
-- Maven
-- Java 17+
 
 ---
 
