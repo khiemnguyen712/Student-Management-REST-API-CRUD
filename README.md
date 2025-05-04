@@ -1,12 +1,12 @@
-# Student Management RESTful API
+# RESTful API
 
-Built using **Spring Boot**, providing Create, Read, Update, Delete (CRUD) functionalities. The APP interacts with a MySQL database using Spring Data JPA and exposes endpoints using Spring Web. Errors are handled gracefully and thoroughly.
+Built using **Spring Boot**, providing Create, Read, Update, Delete (CRUD) functionalities on a MySQL database through the use of Spring Web and Spring Data JPA.
 
 ---
 
 ## Technologies Used
 
-- Spring Web (REST Controllers)
+- Spring Web
 - Spring Data JPA
 - MySQL
 
@@ -32,13 +32,13 @@ src/main/resources
 
 ## API Endpoints
 
-| HTTP Method | Endpoint             | Description                  |
-|-------------|----------------------|------------------------------|
-| GET         | `/api/students`      | Get all students             |
-| GET         | `/api/students/{id}` | Get a student by ID          |
-| POST        | `/api/students`      | Create a new student         |
-| PUT         | `/api/students/{id}` | Update an existing student   |
-| DELETE      | `/api/students/{id}` | Delete a student             |
+| HTTP Method | Endpoint         | Description                  |
+|-------------|------------------|------------------------------|
+| GET         | `/students`      | Get all students             |
+| GET         | `/students/{id}` | Get a student by ID          |
+| POST        | `/students`      | Create a new student         |
+| PUT         | `/students/{id}` | Update an existing student   |
+| DELETE      | `/students/{id}` | Delete a student             |
 
 ---
 
